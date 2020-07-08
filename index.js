@@ -47,6 +47,18 @@ const questions = [
         name: "testing",
         default: "Enter testing instructions here."
         },
+        {
+        type: "list",
+        message: "What type of license is this project covered under?",
+        choices: ["MIT", "GPL v3", "Mozilla"],
+        name: "license"
+        },
+        {
+        type: "input",
+        message: "What is your email address?",
+        name: "questions"
+        },
+        
 
 
 ];
