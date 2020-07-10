@@ -15,7 +15,7 @@ function generateMarkdown(data) {
   [Contributing](#Contributing)
 
   [Tests](#Tests)
-  
+
   [Questions](#Questions)
   
   ## Installation
@@ -28,10 +28,10 @@ function generateMarkdown(data) {
   ${data.license}
   
   ## Contributing
-  ${data.contributors}
+  ${data.contributing}
   
   ## Tests
-  ${data.tests}
+  ${data.testing}
   
   ## Questions 
   GitHub Profile: [${data.username}](http://github.com/${data.username})
