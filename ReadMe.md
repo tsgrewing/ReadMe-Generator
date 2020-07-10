@@ -1,26 +1,26 @@
-# Practice
+# Testing
 
   ## Description
-  still working on it
+  testing again
   
   ## Table of Contents
   [Installation](#Installation)
-  
+
   [Usage](#Usage)
-  
+
   [License](#License)
-  
+
   [Contributing](#Contributing)
-  
+
   [Tests](#Tests)
   
   [Questions](#Questions)
   
   ## Installation
-  download
+  install the thing
   
   ## Usage
-  use it like normal
+  use it to make a readme
   
   ## License
   MIT
