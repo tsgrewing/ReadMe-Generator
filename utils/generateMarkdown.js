@@ -1,6 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  let licenseBadge = () => {
+  let licenseBadge = (function() {
     if (data.license === 'MIT') {
       return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
     }
@@ -16,7 +16,7 @@ function generateMarkdown(data) {
     else if (data.license === 'WTFPL') {
       return "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)";
     }    
-  };
+  })();
 
   return `# ${data.title}
 
@@ -43,7 +43,7 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ## License
-  ${data.license}
+  ${licenseBadge}
   
   ## Contributing
   ${data.contributing}
@@ -54,9 +54,6 @@ function generateMarkdown(data) {
   ## Questions 
   GitHub Profile: [${data.username}](http://github.com/${data.username})
   Please email me at ${data.questions} with additional questions.
-  
-  ## License
-  ${licenseBadge}
   `
   ;
 }
