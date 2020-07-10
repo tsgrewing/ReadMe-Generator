@@ -52,7 +52,7 @@ const questions = [
         {
         type: "list",
         message: "What type of license is this project covered under?",
-        choices: ["MIT", "GPL v3", "Mozilla"],
+        choices: ["MIT", "GPL v3", "Mozilla", "Unilicense", "WTFPL"],
         name: "license",
         default: "MIT"
         },
