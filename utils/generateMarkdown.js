@@ -56,6 +56,7 @@ function generateMarkdown(data) {
   Please email me at ${data.questions} with additional questions.
   
   ## License
+  ${licenseBadge}
   `
   ;
 }
