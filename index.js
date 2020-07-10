@@ -2,6 +2,8 @@ var inquirer = require("inquirer");
 var axios = require("axios");
 const fs = require("fs");
 
+const util = require("util");
+const writeFileAsync = util.promisify(fs.writeFile);
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
@@ -37,9 +39,9 @@ const questions = [
         },
         {
         type: "input",
-        message: "List any contributors on this project(separate contributors with a comma. If there are no contributors type 'none'.).",
-        name: "contributors",
-        default: 'none'
+        message: "What are the guidelines for contributing to your project?",
+        name: "contributoring",
+        default: "Enter contribution guidelines here."
         },
         {
         type: "input",
@@ -51,26 +53,39 @@ const questions = [
         type: "list",
         message: "What type of license is this project covered under?",
         choices: ["MIT", "GPL v3", "Mozilla"],
-        name: "license"
+        name: "license",
+        default: "MIT"
         },
         {
         type: "input",
         message: "What is your email address?",
-        name: "questions"
+        name: "questions",
+        default: "ENTER EMAIL ADDRESS HERE"
         },
-        
-
-
 ];
 
+function promptUser() {
+        return inquirer.prompt(questions)
+};
+
 // function to write README file
-function writeToFile(fileName, data) {
-}
+// function writeToFile('ReadMe.md', ) {
+// }
 
 // function to initialize program
-function init() {
-
-}
+async function init() {
+        try {
+          const answers = await promptUser();
+      
+          const readMe = generateMarkdown(answers);
+      
+          await writeFileAsync("ReadMe.md", readMe);
+      
+          console.log("Successfully wrote to ReadMe.md");
+        } catch(err) {
+          console.log(err);
+        }
+      }
 
 // function call to initialize program
 init();
