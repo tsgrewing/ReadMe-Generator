@@ -31,7 +31,7 @@ function generateMarkdown(data) {
   })();
 
   return `# ${data.title}
-  ${licenseBadge}
+  ${licenseBadge} ![Last Commit](https://img.shields.io/github/last-commit/${data.username}/${data.repoName}) ${data.badges}
 
   ## Description
   ${data.description}
@@ -56,7 +56,7 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ## License
-  This project is covered under the ${licenseInfo}.
+  This project is covered under the ${licenseInfo}
   
   ## Contributing
   ${data.contributing}

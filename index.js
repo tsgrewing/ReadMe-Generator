@@ -1,8 +1,7 @@
 var inquirer = require("inquirer");
-var axios = require("axios");
 const fs = require("fs");
-
 const util = require("util");
+
 const writeFileAsync = util.promisify(fs.writeFile);
 const generateMarkdown = require("./utils/generateMarkdown");
 
@@ -12,6 +11,11 @@ const questions = [
         type: "input",
         message: "What is your GitHub username?",
         name: "username"
+        },
+        {
+        type: "input",
+        message: "What is your GitHub repository name for this project? (please make sure to enter this exactly as it is on GitHub)",
+        name: "repoName"
         },
         {
         type: "input",
@@ -61,7 +65,12 @@ const questions = [
         message: "What is your email address?",
         name: "questions",
         default: "ENTER EMAIL ADDRESS HERE"
-        },
+        }, 
+        {
+        type: "type",
+        message: "Please include the full links to any badges you would like to add to your readme in addition to the most recent commit badge. Format should be ![badge type](badge url)", 
+        name: "badges"
+        }
 ];
 
 function promptUser() {
