@@ -1,5 +1,5 @@
 # ReadMe Generator
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)] ![Last Commit](https://img.shields.io/github/last-commit/tsgrewing/ReadMe-Generator) ![Repo Size](https://img.shields.io/github/repo-size/tsgrewing/ReadMe-Generator)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Last Commit](https://img.shields.io/github/last-commit/tsgrewing/ReadMe-Generator) 
 
   ## Description
     A CLI program to generate a good ReadMe for projects. The generated ReadMe should include a title, description, clickable table of contents, and sections for usage, contributing, testing, and licensing info. There will also be instructions for contacting the project creator with questions, and the option to add badges to the bottom of the readme.
