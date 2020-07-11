@@ -1,4 +1,5 @@
 # ReadMe Generator
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
   A CLI program to generate a good ReadMe for projects. The generated ReadMe should include a title, description, clickable table of contents, and sections for usage, contributing, testing, and licensing info. There will also be instructions for contacting the project creator with questions, and the option to add badges to the bottom of the readme.
@@ -23,7 +24,7 @@
   After installation run index.js and answer the questions. After all the questions have been answered "ReadMe.md" will be created and poplulated with their answers.
   
   ## License
-  [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+  This project is covered under the MIT License, more information can be found [here](https://opensource.org/licenses/MIT)..
   
   ## Contributing
   undefined

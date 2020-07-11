@@ -40,7 +40,7 @@ const questions = [
         {
         type: "input",
         message: "What are the guidelines for contributing to your project?",
-        name: "contributoring",
+        name: "contributing",
         default: "Enter contribution guidelines here."
         },
         {
