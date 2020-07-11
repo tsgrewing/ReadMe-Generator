@@ -1,24 +1,37 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  let licenseInfo = "";
+  let licenseName = data.license;
   let licenseBadge = (function() {
-    if (data.license === 'MIT') {
-      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    if (licenseName === 'MIT') {
+      licenseLink = "(https://opensource.org/licenses/MIT)";
+      licenseInfo = `${licenseName} License, more information can be found [here]${licenseLink}.`;
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]${licenseLink}`;
     }
-    else if (data.license === 'Mozilla') {
-      return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+    else if (licenseName === 'Mozilla') {
+      licenseLink = "(https://opensource.org/licenses/MPL-2.0)";
+      licenseInfo =`${licenseName} License, more information can be found [here]${licenseLink}`;
+      return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]${licenseLink}`;
     }
-    else if (data.license === 'GPL v3') {
-      return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    else if (licenseName === 'GPL v3') {
+      licenseLink = "(https://www.gnu.org/licenses/gpl-3.0)";
+      licenseInfo =`${licenseName} License, more information can be found [here]${licenseLink}`;
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]${licenseLink}`;
     }
-    else if (data.license === 'Unilicense') {
-      return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
+    else if (licenseName === 'Unlicense') {
+      licenseLink = "(https://www.unlicense.org)";
+      licenseInfo =`${licenseName}, more information can be found [here]${licenseLink}`;
+      return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)]${licenseLink}`;
     }
-    else if (data.license === 'WTFPL') {
-      return "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)";
+    else if (licenseName === 'WTFPL') {
+      licenseLink = "(http://www.wtfpl.net/about/)"
+      licenseInfo =`${licenseName}, more information can be found [here]${licenseLink}`;
+      return `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)]${licenseLink}`;
     }    
   })();
 
   return `# ${data.title}
+  ${licenseBadge}
 
   ## Description
   ${data.description}
@@ -43,7 +56,7 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ## License
-  ${licenseBadge}
+  This project is covered under the ${licenseInfo}.
   
   ## Contributing
   ${data.contributing}
