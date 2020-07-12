@@ -24,6 +24,7 @@
 
   ## Demo
   ![Demo](/assets/demo.gif)
+  ![Demo](/assets/demopng.png)
   
   ## Usage
    After installation run index.js and answer the questions. After all the questions have been answered "ReadMe.md" will be created and poplulated with their answers.
