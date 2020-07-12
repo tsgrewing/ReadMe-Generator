@@ -7,6 +7,8 @@
   ## Table of Contents
   [Installation](#Installation)
 
+  [Demo](#Demo)
+
   [Usage](#Usage)
 
   [License](#License)
@@ -18,19 +20,22 @@
   [Questions](#Questions)
   
   ## Installation
-  Clone the repo, then run npm install on the command line
+  Clone the repo, then run npm install from the command line
+
+  ## Demo
+  ![Demo](/assets/demo.gif)
   
   ## Usage
-  After installation run index.js and answer the questions. After all the questions have been answered "ReadMe.md" will be created and poplulated with their answers.
+   After installation run index.js and answer the questions. After all the questions have been answered "ReadMe.md" will be created and poplulated with their answers.
   
   ## License
   This project is covered under the MIT License, more information can be found [here](https://opensource.org/licenses/MIT).
   
   ## Contributing
-  Please contact before contributing.
+  Please contact before contributing
   
   ## Tests
-  Run the program from the command line
+  Run the program from the command line.
   
   ## Questions 
   GitHub Profile: [tsgrewing](http://github.com/tsgrewing)
