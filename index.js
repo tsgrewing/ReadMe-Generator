@@ -31,6 +31,12 @@ const questions = [
         },
         {
         type: "input",
+        message: "Enter the relative path of your demo, .gif or .png.",
+        name: "demo",
+        default: "Add project demo file here"
+        },
+        {
+        type: "input",
         message: "How do users install your project?",
         name: "installation",
         default: "Enter installation instructions here."
@@ -88,7 +94,7 @@ async function init() {
       
           const readMe = generateMarkdown(answers);
       
-          await writeFileAsync("ReadMe.md", readMe);
+          await writeFileAsync("ReadMe2.md", readMe);
       
           console.log("Successfully wrote to ReadMe.md");
         } catch(err) {
